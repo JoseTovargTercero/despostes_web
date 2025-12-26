@@ -29,8 +29,3 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
 });
 
 
-grecaptcha.ready(function () {
-    grecaptcha.execute('6LeiGDcsAAAAAPDPRsOLJ5tsDy3W2KeegCuVXhTu', { action: 'contact' }).then(function (token) {
-        document.getElementById('recaptcha_token').value = token;
-    });
-});

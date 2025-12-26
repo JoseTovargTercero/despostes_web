@@ -50,6 +50,17 @@
             integrity="sha384-..." crossorigin="anonymous">
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Schema.org -->
+         <script src="https://www.google.com/recaptcha/api.js?render=6LeiGDcsAAAAAPDPRsOLJ5tsDy3W2KeegCuVXhTu"></script>
+
+<script>
+grecaptcha.ready(function () {
+    grecaptcha.execute('6LeiGDcsAAAAAPDPRsOLJ5tsDy3W2KeegCuVXhTu', { action: 'contact' })
+        .then(function (token) {
+            document.getElementById('recaptcha_token').value = token;
+        });
+});
+</script>
+
         <script type="application/ld+json">
                 {
                 "@context": "https://schema.org",
@@ -472,7 +483,6 @@
             </p>
         </div>
     </footer>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LeiGDcsAAAAAPDPRsOLJ5tsDy3W2KeegCuVXhTu"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/main.js"></script>

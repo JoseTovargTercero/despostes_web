@@ -40,7 +40,7 @@ if (!isset($_POST['ts']) || time() - intval($_POST['ts']) < 3) {
     exit;
 }
 
-$to = 'contacto@tudominio.com';
+$to = 'contacto@iseller-tiendas.com';
 $subject = 'Nuevo mensaje desde Despostes App';
 $body = "Nombre: $name\nEmail: $email\n\nMensaje:\n$message";
 $headers = "Reply-To: $email";
