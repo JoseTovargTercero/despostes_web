@@ -24,14 +24,14 @@
         <meta name="author" content="Despostes App">
 
         <!-- Canonical -->
-        <link rel="canonical" href="https://tudominio.com/">
+        <link rel="canonical" href="https://iseller-tiendas.com/">
 
         <!-- Open Graph (Facebook, WhatsApp) -->
         <meta property="og:title" content="Despostes App | Control total del desposte y rentabilidad">
         <meta property="og:description"
             content="Optimiza tu carnicería con cálculos precisos de desposte, control de precios y análisis de ganancias en tiempo real.">
-        <meta property="og:image" content="https://tudominio.com/src/img/banner.webp">
-        <meta property="og:url" content="https://tudominio.com/">
+        <meta property="og:image" content="https://iseller-tiendas.com/src/img/banner.webp">
+        <meta property="og:url" content="https://iseller-tiendas.com/">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="es_ES">
 
@@ -40,7 +40,7 @@
         <meta name="twitter:title" content="Despostes App | Software para Carnicerías">
         <meta name="twitter:description"
             content="Calcula rendimientos, controla costos y maximiza ganancias en tu carnicería.">
-        <meta name="twitter:image" content="https://tudominio.com/src/img/banner.webp">
+        <meta name="twitter:image" content="https://iseller-tiendas.com/src/img/banner.webp">
 
         <!-- Favicon -->
         <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">

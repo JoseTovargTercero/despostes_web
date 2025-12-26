@@ -6,7 +6,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
 
     const formData = new FormData(this);
 
-    fetch('back/contact.php', {
+    fetch('iseller-tiendas.com/back/contact.php', {
         method: 'POST',
         body: formData
     })
@@ -24,7 +24,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
     })
     .catch(err => {
         feedback.className = "text-danger mt-3 text-center";
-        feedback.textContent = "Error de conexión. Intenta nuevamente.";
+        feedback.textContent = "Error de conexión. Intenta nuevamente."  + err;
     });
 });
 
