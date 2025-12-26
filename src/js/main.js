@@ -6,7 +6,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
 
     const formData = new FormData(this);
 
-    fetch('/back/contact.php', {
+    fetch('/desposte/back/contact.php', {
         method: 'POST',
         body: formData
     })
