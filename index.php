@@ -452,6 +452,7 @@
                             <button type="submit" class="btn btn-primary-app btn-lg">Enviar
                                 Mensaje</button>
                         </div>
+                        <input type="hidden" name="ts" value="<?php echo time(); ?>">
                         <input type="hidden" name="recaptcha_token" id="recaptcha_token">
 
                         <div id="formFeedback" class="mt-3 text-center"></div>

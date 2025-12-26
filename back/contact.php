@@ -16,8 +16,9 @@ $response = file_get_contents(
 $result = json_decode($response, true);
 
 // Validaciones de seguridad
-if (!$result['success'] || $result['score'] < 0.5 || $result['action'] !== 'contact') {
-    echo json_encode(['success' => false, 'message' => 'Actividad sospechosa detectada']);
+//if (!$result['success'] || $result['score'] < 0.5 || $result['action'] !== 'contact') {
+if (!$result['success'] || $result['score'] < 0.3) { 
+echo json_encode(['success' => false, 'message' => 'Actividad sospechosa detectada']);
     exit;
 }
 
