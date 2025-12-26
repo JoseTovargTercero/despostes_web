@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$secret = '6LeiGDcsAAAAAPDPRsOLJ5tsDy3W2KeegCuVXhTu';
+$secret = '6LeiGDcsAAAAAJxFXRcXK5aJISXDnwPkownYvaJz';
 $token  = $_POST['recaptcha_token'] ?? '';
 
 $response = file_get_contents(
@@ -15,10 +15,12 @@ $response = file_get_contents(
 
 $result = json_decode($response, true);
 
-// Validaciones de seguridad
-//if (!$result['success'] || $result['score'] < 0.5 || $result['action'] !== 'contact') {
-if (!$result['success'] || $result['score'] < 0.3) { 
-echo json_encode(['success' => false, 'message' => 'Actividad sospechosa detectada']);
+// Validación reCAPTCHA v3 (UMBRAL AJUSTADO)
+if (!$result['success'] || ($result['score'] ?? 0) < 0.3) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'No se pudo validar la solicitud. Intenta nuevamente.'
+    ]);
     exit;
 }
 
@@ -32,8 +34,13 @@ if (!$name || !$email || !$message) {
     exit;
 }
 
-// Envío
-$to = 'contacto@iseller-tiendas.com';
+// Protección extra: tiempo mínimo (anti-bot)
+if (!isset($_POST['ts']) || time() - intval($_POST['ts']) < 3) {
+    echo json_encode(['success' => false, 'message' => 'Envío demasiado rápido']);
+    exit;
+}
+
+$to = 'contacto@tudominio.com';
 $subject = 'Nuevo mensaje desde Despostes App';
 $body = "Nombre: $name\nEmail: $email\n\nMensaje:\n$message";
 $headers = "Reply-To: $email";
