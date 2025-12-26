@@ -29,3 +29,14 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
 });
 
 
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    const ts = document.querySelector('input[name="ts"]').value;
+    const now = Math.floor(Date.now() / 1000);
+
+    // Menos de 5 segundos = bot
+    if ((now - ts) < 5) {
+        e.preventDefault();
+        document.getElementById('formFeedback').innerHTML =
+            '<div class="text-danger">Actividad sospechosa detectada.</div>';
+    }
+});

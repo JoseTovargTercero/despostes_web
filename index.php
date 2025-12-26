@@ -50,16 +50,6 @@
             integrity="sha384-..." crossorigin="anonymous">
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Schema.org -->
-         <script src="https://www.google.com/recaptcha/api.js?render=6LeiGDcsAAAAAPDPRsOLJ5tsDy3W2KeegCuVXhTu"></script>
-
-<script>
-grecaptcha.ready(function () {
-    grecaptcha.execute('6LeiGDcsAAAAAPDPRsOLJ5tsDy3W2KeegCuVXhTu', { action: 'contact' })
-        .then(function (token) {
-            document.getElementById('recaptcha_token').value = token;
-        });
-});
-</script>
 
         <script type="application/ld+json">
                 {
@@ -458,12 +448,23 @@ grecaptcha.ready(function () {
                             <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                         </div>
 
+
+                        <!-- Honeypot (campo trampa para bots) -->
+                        <div style="position:absolute; left:-9999px; top:-9999px;">
+                            <label for="company">Empresa</label>
+                            <input type="text" name="company" id="company" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <!-- Timestamp -->
+                        <input type="hidden" name="ts" value="<?php echo time(); ?>">
+
+
                         <div class="d-grid">
                             <button type="submit" class="btn btn-primary-app btn-lg">Enviar
                                 Mensaje</button>
                         </div>
-                        <input type="hidden" name="ts" value="<?php echo time(); ?>">
-                        <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+                    
+                        
 
                         <div id="formFeedback" class="mt-3 text-center"></div>
                     </form>
