@@ -275,7 +275,7 @@
                     <h1>Optimiza tu Carnicería con <span>Despostes App</span></h1>
                     <p class="lead">La herramienta definitiva para calcular rendimientos, controlar costos y maximizar
                         las ganancias de tus productos cárnicos.</p>
-                    <a href="#download" class="btn btn-primary-app btn-lg">Descárgala Ahora</a>
+                    <a href="desposte_app.apk" class="btn btn-primary-app btn-lg">Descárgala Ahora</a>
                 </div>
             </div>
         </div>
@@ -415,7 +415,7 @@
                             <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Actualizaciones
                                 automáticas</li>
                         </ul>
-                        <a href="#download" class="btn btn-primary-app btn-lg w-100">Comenzar Ahora</a>
+                        <a href="desposte_app.apk" class="btn btn-primary-app btn-lg w-100">Comenzar Ahora</a>
                         <p class="mt-3 text-muted"><small>¡Prueba <b>gratis</b> disponible antes de pagar!</small></p>
                     </div>
                 </div>

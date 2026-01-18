@@ -16,7 +16,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
             feedback.className = "text-success mt-3 text-center";
             feedback.textContent = data.message;
             document.getElementById('contactForm').reset();
-            grecaptcha.reset(); // reset reCAPTCHA
         } else {
             feedback.className = "text-danger mt-3 text-center";
             feedback.textContent = data.message;
