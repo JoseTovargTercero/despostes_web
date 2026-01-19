@@ -226,7 +226,65 @@
             #pricing ul li i {
                 font-size: 1.2rem;
             }
-        </style>
+.shorts-section {
+    margin-top: 40px;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.shorts-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shorts-slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.shorts-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.short {
+  flex: 0 0 25%;
+  padding: 10px;
+}
+
+.short iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 14px;
+  border: none;
+}
+
+/* Botones */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,.6);
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+}
+
+.prev { left: 5px; }
+.next { right: 5px; }
+
+/* 📱 Mobile: solo 1 visible */
+@media (max-width: 768px) {
+  .short { flex: 0 0 100%; }
+}
+
+                    </style>
     </head>
 
 <body>
@@ -367,6 +425,38 @@
                 </div>
 
             </div>
+
+            <section class="shorts-section">
+                <h2>Tutoriales rápidos</h2>
+
+                <div class="shorts-slider">
+                    <button class="nav prev" style="width: 50px; place-content: center;" onclick="moveShorts(-1)">❮</button>
+
+                    <div class="shorts-track" id="shortsTrack">
+                    <div class="short">
+                        <iframe src="https://www.youtube.com/embed/hB9CljEoRJ4"
+                        allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="short">
+                        <iframe src="https://www.youtube.com/embed/cFMVemUwOP0"
+                        allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="short">
+                        <iframe src="https://www.youtube.com/embed/vBNnyNbMxvY"
+                        allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="short">
+                        <iframe src="https://www.youtube.com/embed/6ZLjmfutI7A"
+                        allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    </div>
+
+                    <button class="nav next" style="width: 50px; place-content: center;" onclick="moveShorts(1)">❯</button>
+                </div>
+                </section>
+
+                
+
         </div>
     </section>
 
@@ -487,6 +577,26 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/main.js"></script>
+
+    
+<script>
+let index = 0;
+
+function moveShorts(dir) {
+  const track = document.getElementById('shortsTrack');
+  const items = track.children.length;
+  const visible = window.innerWidth <= 768 ? 1 : 4;
+
+  index += dir;
+
+  if (index < 0) index = 0;
+  if (index > items - visible) index = items - visible;
+
+  const percent = (100 / visible) * index;
+  track.style.transform = `translateX(-${percent}%)`;
+}
+</script>
+
 </body>
 
 </html>
