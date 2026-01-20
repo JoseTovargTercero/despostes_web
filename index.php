@@ -30,12 +30,16 @@
         <meta property="og:title" content="Despostes App | Control total del desposte y rentabilidad">
         <meta property="og:description"
             content="Optimiza tu carnicería con cálculos precisos de desposte, control de precios y análisis de ganancias en tiempo real.">
-        <meta property="og:image" content="https://iseller-tiendas.com/desposte/assets/img/og-image.jpg">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
         <meta property="og:url" content="https://iseller-tiendas.com/desposte/">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="es_ES">
+        
+        <meta property="og:image" content="https://iseller-tiendas.com/desposte/assets/img/og-image.jpg">
+        <meta property="og:image:secure_url" content="https://iseller-tiendas.com/desposte/assets/img/og-image.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image">
