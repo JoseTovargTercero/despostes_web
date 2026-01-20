@@ -30,7 +30,7 @@
         <meta property="og:title" content="Despostes App | Control total del desposte y rentabilidad">
         <meta property="og:description"
             content="Optimiza tu carnicería con cálculos precisos de desposte, control de precios y análisis de ganancias en tiempo real.">
-        <meta property="og:image" content="https://iseller-tiendas.com/desposte/src/img/og-image.png">
+        <meta property="og:image" content="https://iseller-tiendas.com/desposte/src/img/og-image.jpg">
         <meta property="og:url" content="https://iseller-tiendas.com/desposte/">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="es_ES">
@@ -40,11 +40,11 @@
         <meta name="twitter:title" content="Despostes App | Software para Carnicerías">
         <meta name="twitter:description"
             content="Calcula rendimientos, controla costos y maximiza ganancias en tu carnicería.">
-            <meta name="twitter:image" content="https://iseller-tiendas.com/desposte/src/img/og-image.png">
+            <meta name="twitter:image" content="https://iseller-tiendas.com/desposte/src/img/og-image.jpg">
 
         <!-- Favicon -->
         <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
-        <link rel="preload" as="image" href="src/img/og-image.png">
+        <link rel="preload" as="image" href="src/img/og-image.jpg">
         <!-- CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-..." crossorigin="anonymous">
