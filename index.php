@@ -466,7 +466,7 @@
             <h2 class="mb-4">¡Descarga Despostes App Hoy Mismo!</h2>
             <p class="lead mb-5">Disponible para Android. Potencia tu negocio y toma decisiones más inteligentes.</p>
             <div class="download-buttons">
-                <a href="#" target="_blank" class="d-inline-block mx-3 text-white" aria-label="Descargar Despostes App">
+                <a href="desposte_app.apk"  target="_blank" class="d-inline-block mx-3 text-white" aria-label="Descargar Despostes App">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                         alt="Descargar">
                 </a>
